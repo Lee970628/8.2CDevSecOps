@@ -2,8 +2,8 @@ pipeline {
 agent any
 
 environment {
-    PATH = "/Users/liiiii/.nvm/versions/node/v22.8.0/bin:/opt/homebrew/opt/openjdk@11/bin:${env.PATH}"
-    JAVA_HOME = "/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home"
+    PATH = "/Users/liiiii/.nvm/versions/node/v22.8.0/bin:/opt/homebrew/opt/openjdk@17/bin:${env.PATH}"
+    JAVA_HOME = "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
     SONAR_SCANNER_HOME = "/Users/liiiii/Desktop/SIT753 PPIT/wk8/nodejs-goof/sonar-scanner-4.8.0.2856"
 }
 
