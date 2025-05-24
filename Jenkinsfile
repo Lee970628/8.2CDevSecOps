@@ -49,7 +49,7 @@ sonar-scanner \
   -Dsonar.login=$SONAR_TOKEN \
   -Dsonar.exclusions=node_modules/**,test/**,sonar-scanner-4.8.0.2856/**,*.zip
 
-echo "✅ SonarCloud Analysis completed!"
+echo "SonarCloud Analysis completed!"
 '''
 }
 }
@@ -64,23 +64,13 @@ sh 'npm audit || true'
 post {
 always {
 echo '''
-=================================================
-📋 Complete DevSecOps Pipeline Summary
-=================================================
-✅ Checkout: Source code retrieval
-✅ Install Dependencies: npm install
-✅ Run Tests: Automated testing
-✅ Generate Coverage Report: Test coverage
-✅ SonarCloud Analysis: Real security & quality scan
-✅ NPM Audit: Vulnerability assessment
-=================================================
-'''
+
 }
 success {
-echo "🎉 Complete DevSecOps pipeline with real SonarCloud analysis successful!"
+echo "Complete DevSecOps pipeline with real SonarCloud analysis successful!"
 }
 failure {
-echo "❌ Pipeline failed - check logs for details"
+echo "Pipeline failed - check logs for details"
 }
 }
 }
